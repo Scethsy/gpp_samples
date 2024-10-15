@@ -8,11 +8,11 @@ int main() {
 	cout << "Enter a number: " << endl;
 	cin >>x;
 
+//double fmod(double numerator, double denominator);
 if (fmod(x, 1) == 0) {
         cout << x << " is a whole number" << endl;
     } else {
         cout << x << " is a decimal number" << endl;
     }
-
     return 0;
 }
