@@ -11,7 +11,7 @@ int main() {
     if (x == "Nathan" || x == "nathan" || x == "neyney") {
         cout <<"I love you too <3" << endl;
     }
-    else {
+    else if (x == "I love you") {
         cout <<"Sino si "<<x <<":<" << endl;
     }
 
