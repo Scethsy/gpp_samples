@@ -8,7 +8,7 @@ int main() {
     
     getline(cin, x);
 
-    if (x == "Nathan" || x == "nathan" || x == "neyney") {
+    if (x == "N" || x == "n" || x == "ne") {
         cout <<"I love you too <3" << endl;
     }
     else if (x == "I love you") {
