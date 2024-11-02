@@ -26,12 +26,12 @@ int main() {
 
     // Calculate individual currencies
     usd = php/43.33089;
-    euro = php/43.33089*0.734719;
-    yuan = php/43.33089*6.346934;
-    kor = php/43.33089*18.77263;
-    kro = php/43.33089*5.449007;
-    sheq = php/43.33089*3.726334;
-    dnr = php/43.33089*0.274588;
+    euro = usd*0.734719;
+    yuan = usd*6.346934;
+    kor = usd*18.77263;
+    kro = usd*5.449007;
+    sheq = usd*3.726334;
+    dnr = usd*0.274588;
 
     // Display result
     cout <<"The amount's equivalent to: "<< endl<< endl;
