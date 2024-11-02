@@ -17,17 +17,19 @@ int main() {
         }
     }
     float x1 = coordinates[0], y1 = coordinates[1], x2 = coordinates[2], y2 = coordinates[3];
-   //Calculations
-   //Slope
-   m = (y2 - y1) / (x2 - x1);
-   //Intercept
-   c = y2 - m * x2;
-
+    //Calculations
+    //Slope
+    m = (y2 - y1) / (x2 - x1);
+    //Intercept
+    c = y2 - m * x2;
 
     // Display result
-    cout <<"Equation of the line with endpoints ("<< x1 << ", "<< y1 << ") and ("<< x2 << ", " << y2 << ") : Y = " << m << "X +" << c << endl;
-
-    //Equation of the line with endpoints (2, 3 and (5, 7) : Y = 1.33333X +0.333333
+    cout <<"Equation of the line with endpoints ("<< x1 << ", "<< y1 << ") and ("<< x2 << ", " << y2 << ") : Y = " << m << "X ";
+    if (c < 0) {
+        cout <<"- " << -c << endl;
+    } else {
+        cout << "+ " << c << endl;
+    }
 
     return 0;
 }
