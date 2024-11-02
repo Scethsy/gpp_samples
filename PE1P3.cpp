@@ -1,47 +1,22 @@
 #include <iostream>
 using namespace std;
 
-// Calculation of individual digits of a 5-digit number
+// Calculation of Slope and Intercept
 int main() {
-    float x1, x2, y1, y2, m = 0, c = 0;
-    cout << "Program to find the equation of a line given two endpoints: " << endl;
-    cout << "Enter X1: " << endl;
-    cin >> x1;
-    cout << "Enter X2: " << endl;
-    cin >> x2;
-    cout << "Enter y1: " << endl;
-    cin >> y1;
-    cout << "Enter y2: " << endl;
-    cin >> y2;
-    while (true) {
-        cout << "Enter X1: " << endl;
-        if (cin >> x1) {
-            break;
-        }
-        else {
-            cout << "Error! Enter a valid X1 coordinate value: " << endl;
+    float coordinates[4], m = 0, c = 0;
+    const char* variable[] = {"X1", "Y1", "X2", "Y2"};
+    int x = 0;
+    while (x < 4) {
+        cout << "Enter " << variable[x] << " coordinate:" << endl;
+        if (cin >> coordinates[x]) {
+            x++;
+        } else {
+            cout << "Error! enter a valid "<< variable[x] << " coordinate value" << endl;
             cin.clear();
-            cin.ignore(123, '\n');
+            cin.ignore(123,'\n');
         }
     }
-    /*while (true) {
-        // Check if input is a valid integer
-        if (!(cin >> php)) {
-            cout << "Error: enter a valid value of Php." << endl;
-            cin.clear();
-            cin.ignore(123, '\n');
-            continue;
-        }
-        
-        // Check if the number is positive
-        else if (php >= 0) {
-            // If valid, break out of the loop
-            break;
-        } else {
-            cout <<"Please enter a positive value of Php: " << endl;
-        }
-    }*/
-
+    float x1 = coordinates[0], y1 = coordinates[1], x2 = coordinates[2], y2 = coordinates[3];
    //Calculations
    //Slope
    m = (y2 - y1) / (x2 - x1);
