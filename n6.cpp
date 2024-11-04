@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    float x, y;
+    float x, y = 1;
     cout << "Enter a number of digits you want: " << endl;
     while (true) {
         if (!(cin >> x)) {
@@ -18,15 +18,10 @@ int main() {
             cout <<"Please enter a positive number: " << endl;
         }
     }
-    y = 1;
-    while (x < 0) {
-        cout <<"Please enter a positive number: " << endl;
-        cin >> x;
-    }
-    while (y <= x) {
-        cout << y << endl;
-        y++;
-    }
+        while (y <= x) {
+            cout << y << endl;
+            y++;
+        }
 
     return 0;
 }

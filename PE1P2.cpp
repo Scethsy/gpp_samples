@@ -2,7 +2,7 @@
 #include <math.h>
 using namespace std;
 
-// Calculation of individual digits of a 5-digit number
+// Calculation of Heron's Formula Using 3 sides to get Triangle's Area
 int main() {
     float sides[3], s, A;
     const char* sequence[] = {"first", "second", "third"};
@@ -14,7 +14,7 @@ int main() {
         if (cin >> sides[x]) {
             x++;  // Move to the next side if input is valid
         } else {
-            cout << "Error: enter a valid value" << endl;
+            cout << "Error! enter a valid value" << endl;
             cin.clear();
             cin.ignore(123, '\n');
         }
@@ -27,7 +27,7 @@ int main() {
 
     // Output
     cout <<"The value of s is: "<< s << endl<< endl;
-    cout <<"The area of the triangle is : " << A << endl<< endl;
+    cout <<"The area of the triangle is : " << A;
 
     return 0;
 }
