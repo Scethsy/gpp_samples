@@ -22,19 +22,25 @@ int main() {
             break; //Input Valid
         }
     }
-    cout << "Your input number "<< x << " is a positive number and has ";
-    if (x > 999) {
-        cout << "4 digits." << endl;
-    }
-    else if (x > 99) {
-        cout << "3 digits." << endl;
-    }
-    else if (x > 9) {
-        cout << "2 digits." << endl;
+    if (x > 0) {
+        cout << "Your input number "<< x << " is a positive number and has ";
+        if (x > 999) {
+            cout << "4 digits." << endl;
+        }
+        else if (x > 99) {
+            cout << "3 digits." << endl;
+        }
+        else if (x > 9) {
+            cout << "2 digits." << endl;
+        }
+        else {
+            cout << "1 digit." << endl;
+        }
     }
     else {
-        cout << "1 digit." << endl;
+        cout << "Your input number " << x << " is a non-positive number.";
     }
+
     return 0;
 }
 
