@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
-//max of 4 digits only
-//accepts only positive number
-//if 0 or negative print "It is a non-positive number"
-//if positive print it is a positive number and how many the digits are
+//Calculator
 int main() {
     float input[2], x = 0;
     const char* number[] = {"first", "second"};
