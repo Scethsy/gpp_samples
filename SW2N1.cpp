@@ -38,7 +38,7 @@ int main() {
         }
     }
     else {
-        cout << "Your input number " << x << " is a non-positive number.";
+        cout << "Your input number " << x << " is a non-positive number." << endl;
     }
 
     return 0;
