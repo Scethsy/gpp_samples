@@ -24,13 +24,13 @@ int main () {
         cout << "Error! Denominator cannot be zero." << endl;
         return 1;
     }
-    
+
     // Find the GCD (Greatest Common Divisor) using Euclidean algorithm
     int gcd_value = 1;  // Default GCD is 1 if no common factors are found
     int a = abs(nomi); // Absolute value to avoid negative numbers during GCD calculation
     int b = abs(deno);
 
-    // Calculate GCD using Euclidean algorithm
+    //GCD Euclidean algorithm
     while (b != 0) {
         int temp = b;
         b = a % b;
