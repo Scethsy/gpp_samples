@@ -2,7 +2,7 @@
 //accept two different arrays and calculate its sum
 int main () {
     int a, b, limit = 0, limita = 0, limitb = 0;
-    printf("Instructions \n (Enter two groups of number to be addded together)\n\n");
+    printf("Instructions \n (Enter two groups of number to be added all together)\n\n");
     printf("How many numbers would you like to enter: \n");
     while (1) {
         if (scanf("%d", &a) != 1) {
@@ -20,17 +20,12 @@ int main () {
     float inputa[limit];
     for (int x = 0; x < limit; x++, a--) {
         printf("Enter a number (%d more): \n", a);
-        while (1) {
-            if (scanf("%f", &inputa[x]) != 1) {
-                printf("Error! Enter a valid number: \n");
-                while (getchar() != '\n');
-                continue;
-            } else {
-                break;
-            }
+        while (scanf("%f", &inputa[x]) != 1) {
+            printf("Error! Enter a valid number: \n");
+            while (getchar() != '\n');
         }
     }
-    printf("How many numbers would you like to enter: \n");
+    printf("How many numbers would you like to enter again: \n");
     while (1) {
         if (scanf("%d", &b) != 1) {
             printf("Error! Enter a valid number: \n");
@@ -46,15 +41,10 @@ int main () {
     limitb = b;
     float inputb[limitb];
     for (int y = 0; y < limitb; y++, b--) {
-        printf("Enter a number (%d more): \n", a);
-        while (1) {
-            if (scanf("%f", &inputb[y]) != 1) {
-                printf("Error! Enter a valid number: \n");
-                while (getchar() != '\n');
-                continue;
-            } else {
-                break;
-            }
+        printf("Enter a number (%d more): \n", b);
+        while (scanf("%f", &inputb[y]) != 1) {
+            printf("Error! Enter a valid number: \n");
+            while (getchar() != '\n');
         }
     }
 
@@ -68,11 +58,9 @@ int main () {
         if (maxb < inputb[z]) {
             maxb = inputb[z];
         }
-    }
-    for (int i = 0; i < limit; i++) {
+    } for (int i = 0; i < limit; i++) {
         suma += inputa[i];
-    }
-    for(int i = 0; i < limitb; i++) {
+    } for(int i = 0; i < limitb; i++) {
         sumb += inputb[i];
     }
     sum = sumb + suma;
