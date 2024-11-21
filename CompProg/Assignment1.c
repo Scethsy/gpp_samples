@@ -1,5 +1,5 @@
 #include <stdio.h>
-//accept two different arrays and calculate its sum
+//accept two different arrays and find max and calculate its sum
 int main () {
     int a, b, limit = 0, limita = 0, limitb = 0;
     printf("Instructions \n (Enter two groups of number to be added all together)\n\n");
@@ -48,7 +48,7 @@ int main () {
         }
     }
 
-    float suma = 0, sumb = 0, sum = 0, maxa  = inputa[0], maxb = inputb[0];
+    float suma = 0, sumb = 0, sum = 0, summax = 0, maxa  = inputa[0], maxb = inputb[0];
     for (int z = 0;z < limit; z++) {
         if (maxa < inputa[z]) {
             maxa = inputa[z];
@@ -64,9 +64,11 @@ int main () {
         sumb += inputb[i];
     }
     sum = sumb + suma;
+    summax = maxa + maxb;
     printf("1st group has the highest number of %.2f their sum total of %.2f\n\n", maxa, suma);
     printf("2nd group has the highest number of %.2f their sum total of %.2f\n\n", maxb, sumb);
     printf("Their total sum is: %.2f\n", sum);
+    printf("The sum of the two max values is: %.2f\n", summax);
 
     return 0;
 }
