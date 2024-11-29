@@ -38,9 +38,8 @@ int main () {
     int a, limit = 0;
     printf("How many numbers would you like to enter: \n");
     input_validation(&a);
-    float input[limit], ma = 0;
+    float input[a], ma = 0;
     input_validation2(input, a);
-
 
     max (input, limit, &ma);
     printf("The largest number is %.2f\n", ma);
