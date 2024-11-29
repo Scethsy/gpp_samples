@@ -19,7 +19,8 @@ int main () {
             z++;
         }
     }
-    printf("The largest number is %.2f\n", input[y]);
-
+    //output
+    printf("The smallest number is %.2f\n", input[y]);
+    
     return 0;
 }
