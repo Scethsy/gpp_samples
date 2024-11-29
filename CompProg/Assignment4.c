@@ -41,7 +41,7 @@ int main () {
     float input[a], ma = 0;
     input_validation2(input, a);
 
-    max (input, limit, &ma);
+    max (input, a, &ma);
     printf("The largest number is %.2f\n", ma);
 
     return 0;
