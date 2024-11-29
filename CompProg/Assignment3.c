@@ -26,10 +26,11 @@ int main () {
             while (getchar() != '\n');
         }
     }
-    for (int i = 0; i < limit - 1; i++) {
-        for (int j = i + 1; j < limit; j++) {
-            if (input[i] > input[j]) {
-                // Swap elements
+    // 4 2 8 1
+    for (i = 0; i < limit - 1; i++) { // i = 4
+        for (int j = i + 1; j < limit; j++) { // j = 2
+            if (input[i] > input[j]) { //4 > 2 Yes then Swap location 2 4 8 1
+                // Swap memory location
                 float holder = input[i];
                 input[i] = input[j];
                 input[j] = holder;

@@ -1,36 +1,29 @@
 #include <stdio.h>
-//find highest / lowest number out of all inputs
-int main () {
-    int a, limit = 0;
-    printf("How many numbers would you like to enter: \n");
-    scanf("%d", &a);
-    limit = a;
-    float input[limit];
-    for(int x = 0; x < limit; x++, a--) {
-        printf ("Enter Number (%d more): \n", a);
-        scanf("%f", &input[x]);
+
+int main() {
+    float x, y;
+    printf("Enter Temperature in Fahrenheit:\n");
+    
+    // Input validation loop
+    while (scanf("%f", &x) != 1) {
+        printf("Error: enter a valid temperature value: \n");
+        while (getchar() != '\n');  // Clear the invalid input
     }
-    int y = 0, z = 1;
-    while (z < limit) {
-        if (input[y] > input[z]) {
-            z++;
-        } else {
-            y = z;
-            z++;
-        }
+    
+    // Formula for converting Fahrenheit to Celsius
+    y = (x - 32) * 5 / 9;
+    
+    // Temperature range checking
+    if (y < 0) {
+        printf("%.2f is %.2f in Celsius\n", x, y);
+        printf("Temperature is cold\n");
+    } else if (y > 40) {
+        printf("%.2f is %.2f in Celsius\n", x, y);
+        printf("Temperature is hot\n");
+    } else {
+        printf("%.2f is %.2f in Celsius\n", x, y);
+        printf("Temperature is normal\n");
     }
-    float max = input[y];
-    int c = 0, d = 1;
-    while (d < limit) {
-        if (input[c] < input[d]) {
-            d++;
-        } else {
-            c = d;
-            d++;
-        }
-    }
-    float min = input[c];
-    printf("The largest number is %.2f\n The lowest number is %.2f\n", max, min);
 
     return 0;
 }

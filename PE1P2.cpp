@@ -7,12 +7,12 @@ int main() {
     float sides[3], s, A;
     const char* sequence[] = {"first", "second", "third"};
     int x = 0;
-
+    //Input Validation
     while (x < 3) {
         cout << "Enter " << sequence[x] << " side: " << endl;
         
         if (cin >> sides[x]) {
-            x++;  // Move to the next side if input is valid
+            x++;
         } else {
             cout << "Error! enter a valid value" << endl;
             cin.clear();

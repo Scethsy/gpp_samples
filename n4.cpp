@@ -18,7 +18,7 @@ int main() {
         } else {
             cout << "Enter a valid 5-digit number." << endl;
         }
-        }
+    }
         d1 = x % 10;
         d2 = (x/10) % 10;
         d3 = (x/100) % 10;

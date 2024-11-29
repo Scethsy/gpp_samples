@@ -1,35 +1,35 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    float x, y = 0;
+    float coordinates[4], m = 0, c = 0;
+    const char* variable[] = {"X1", "Y1", "X2", "Y2"};
+    int x = 0;
 
-    printf("Enter a number: \n");
-    while (scanf("%f", &x) != 1) {
-        printf("Error: enter a number: \n");
-        while (getchar() != '\n');
+    while (x < 4) {
+        printf("Enter %s coordinate: \n", variable[x]);
+        if (scanf("%f", &coordinates[x]) == 1) {
+            x++;
+        } else {
+            printf("Error! enter a valid %s coordinate value\n", variable[x]);
+            while (getchar() != '\n');
+        }
     }
 
-    if (x > 0) {
-        while (y < x) {
-            if (fmod(y, 2) == 0) {
-                printf("%.0f\n", y);
-            }
-            y++;
-        }
-    } else if (x < 0) {
-        while (y > x) {
-            if (fmod(y, 2) == 0) {
-                printf("%.0f\n", y);
-            }
-            y--;          
-        }
+    float x1 = coordinates[0], y1 = coordinates[1], x2 = coordinates[2], y2 = coordinates[3];
+    //calculations`
+    m = (y2 - y1) / (x2 - x1);
+    c = y2 - m * x2;
+
+    printf("Equation of the line with endpoints (%.2f, %.2f) and (%.2f, %.2f) : Y = %.2fX ", x1, y1, x2, y2);
+    if (c < 0) {
+        printf("- %.2f\n", -c);
     } else {
-        printf("There are no numbers between 0 and your given input\n");
+        printf("+ %.2f\n", c);
     }
 
     return 0;
 }
+
 
 
 

@@ -1,23 +1,22 @@
 #include <stdio.h>
-//accept two different arrays and calculate its sum
+//accept two different arrays and calculate its sum individually
 int main () {
     int a, limit = 0, b = 0;
-    printf("Instructions \n(Enter two groups of number to be added together individually)\n\n");
-    printf("How many numbers would you like to enter for the two groups of numbers: \n");
+    printf("Instructions \n(Enter two arrays of number to be added together individually)\n\n");
+    printf("Enter the size for the two arrays: \n");
     while (1) {
         if (scanf("%d", &a) != 1) {
             printf("Error! Enter a valid number: \n");
             while (getchar() != '\n');
             continue;
         } else if (a < 0) {
-            printf("Please Enter a positive number of integers: ");
+            printf("Please Enter a positive number of integers: \n");
             continue;
         } else {
             break;
         }
     }
-    limit = a;
-    b = a;
+    limit = a, b = a;
     float inputa[limit];
     for (int x = 0; x < limit; x++, a--) {
         printf("1st Group: Enter a number (%d more): \n", a);
@@ -40,7 +39,7 @@ int main () {
     for (int i = 0;i < limit; i++) {
         if (maxa < inputa[i]) {
             maxa = inputa[i];
-        }
+        } 
         if (maxb < inputb[i]) {
             maxb = inputb[i];
         }

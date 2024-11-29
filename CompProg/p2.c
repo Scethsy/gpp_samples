@@ -2,34 +2,32 @@
 #include <math.h>
 
 int main() {
-    float x, y = 0;
+    float sides[3], s, A;
+    const char* sequence[] = {"first", "second", "third"};
+    int x = 0;
 
-    printf("Enter a number: \n");
-    while (scanf("%f", &x) != 1) {
-        printf("Error: enter a number: \n");
-        while (getchar() != '\n');
+    while (x < 3) {
+        printf("Enter %s side: \n", sequence[x]);
+        
+        if (scanf("%f", &sides[x]) == 1) {
+            x++;
+        } else {
+            printf("Error! enter a valid value\n");
+            while (getchar() != '\n');
+        }
     }
+    //calculations formula
+    float s1 = sides[0], s2 = sides[1], s3 = sides[2];
+    
+    s = (s1 + s2 + s3) / 2;
+    A = sqrt(s * (s - s1) * (s - s2) * (s - s3));
 
-    if (x > 0) {
-        while (y < x) {
-            if (fmod(y, 2) == 0) {
-                printf("%.0f\n", y);
-            }
-            y++;
-        }
-    } else if (x < 0) {
-        while (y > x) {
-            if (fmod(y, 2) == 0) {
-                printf("%.0f\n", y);
-            }
-            y--;          
-        }
-    } else {
-        printf("There are no numbers between 0 and your given input\n");
-    }
+    printf("The value of s is: %.2f\n\n", s);
+    printf("The area of the triangle is: %.2f\n", A);
 
     return 0;
 }
+
 
 
 

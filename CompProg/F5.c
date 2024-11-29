@@ -45,14 +45,14 @@ void Multiples (int x, int y) {
 }
 
 int main () {
-    int x = 0, y = 0, limit = 0;
+    int x = 0, y = 0;
     printf("Instructions\n(Enter a number that would count multiples of a certain number between 0 and your input.)\n\n");
     printf("Multiples of what number would to want?: \n");
     input_validation (&y);
     
     printf("Enter a number: \n");
     input_validation2 (&x);
-    
+
     printf("The Multiples of %d between 0 and %d are:\n", y, x);
     Multiples(x, y);
     

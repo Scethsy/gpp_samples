@@ -6,19 +6,8 @@ int main() {
     cout << "Enter Temperature in Fahrenheit:" << endl;
     cin >> x;
     //Formula of fahrenheit to celsius
-    /*while (true) {
-        if (!(cin >> x)) {
-            cout << "Error: enter a valid temperature value: " << endl;
-            cin.clear();
-            cin.ignore(123, '\n');
-            continue;
-        }
-        else {
-            break;
-        }
-    }*/
     while (!(cin >> x)) {
-        cout << "Error: enter a number: " << endl;
+        cout << "Error: enter a valid temperature value: " << endl;
         cin.clear();
         cin.ignore(123, '\n');
     }
