@@ -123,13 +123,14 @@ int main() {
   InputValidation(x);
   switch (x) {
     case 1://Add Record
-      for(int i = 0; i < 5; i++) {
+      for(int i = 0; true; i++) {
         if (arr[i].name.empty()) {
           addrecord(arr, i);
           break;
         } 
+
       }
-      int j = 0;
+      int j;
       cout <<"Reached Maximum number of players entered\n";
       cout <<"\nWould you like to replace other player's data? (Type 1 if yes and any other key otherwise)";
       InputValidation(j);
