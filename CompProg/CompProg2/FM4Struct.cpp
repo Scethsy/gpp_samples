@@ -72,13 +72,14 @@ void addrecord(player arr[], int i) {
   InputValidation2(arr[i].bestscore[1]);
 }
 
-void displaydata(player arr[]) {
+void displaydata(player arr[], int total) {
   int number_p = 0;
   if(arr[0].name.empty()) {
     cout <<"No players found in the data." << endl;
+  } else {
+    cout<<"Who's record would you like to view?(choices 1-"<<total<<")\n";
   }
   for(int z = 0; z < 5; z++) {
-    cout<<"Who's record would you like to view?(choices 1-"<<z+1<<")\n";
     if (!arr[z].name.empty()) {
         cout<<z+1<<". "<<"      "<< arr[z].name << endl;
         number_p += 1;
@@ -148,7 +149,7 @@ int main() {
       break;
 
     case 2://view record
-      displaydata(arr);
+      displaydata(arr, total);
       if(!arr[0].name.empty()) {
         int view;
         InputValidation(view);
