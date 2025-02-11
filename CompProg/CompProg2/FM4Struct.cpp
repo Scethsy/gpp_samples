@@ -114,34 +114,37 @@ float average(player arr[]) {
   }
   return ans;
 }
+
+int totalplayers(player arr[]) {
+  int total = 0;
+  for(int i = 0; i < 5; i++) {
+    if(!(arr[i].name.empty())) {
+      total += 1;
+    }
+  }
+  return total;
+}
+
 int main() {
-  int x;
   player arr[5] = {};
+  int x;
+  int max = 5;
+  int total = totalplayers(arr);
+  
   do {
   menu();
   choices_menu();
   InputValidation(x);
   switch (x) {
     case 1://Add Record
-      for(int i = 0; true; i++) {
-        if (arr[i].name.empty()) {
-          addrecord(arr, i);
-          break;
-        } 
 
+      if(total < max) {
+        addrecord(arr, total);
+        total += 1;
+      } else {
+        cout<<"The maximum number of players has been reached."<<endl;
       }
-      int j;
-      cout <<"Reached Maximum number of players entered\n";
-      cout <<"\nWould you like to replace other player's data? (Type 1 if yes and any other key otherwise)";
-      InputValidation(j);
-      if (j == 1) {
-        displaydata(arr);
-        cout<<"Select a number to choose to alter data.\n";
-        int alter;
-        InputValidation(alter);
-        addrecord(arr, alter-1);
-        break;
-      }
+      
       break;
 
     case 2://view record
