@@ -76,6 +76,8 @@ void displaydata(player arr[]) {
   int number_p = 0;
   if(arr[0].name.empty()) {
     cout <<"No players found in the data." << endl;
+  } else {
+    cout<<"Who's record would you like to view?\n";
   }
   for(int z = 0; z < 5; z++) {
     if (!arr[z].name.empty()) {
@@ -142,7 +144,6 @@ int main() {
       }
     break;
     case 2://view record
-      cout<<"Who's record would you like to view?\n";
       displaydata(arr);
       if(!arr[0].name.empty()) {
         int view;
