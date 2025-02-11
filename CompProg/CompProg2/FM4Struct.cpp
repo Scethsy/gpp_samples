@@ -76,12 +76,11 @@ void displaydata(player arr[]) {
   int number_p = 0;
   if(arr[0].name.empty()) {
     cout <<"No players found in the data." << endl;
-  } else {
-    for(int z = 0; z < 5; z++) {
-      if (!arr[z].name.empty()) {
-          cout<<z+1<<". "<<"      "<< arr[z].name << endl;
-          number_p += 1;
-      }
+  }
+  for(int z = 0; z < 5; z++) {
+    if (!arr[z].name.empty()) {
+        cout<<z+1<<". "<<"      "<< arr[z].name << endl;
+        number_p += 1;
     }
   }
 }
@@ -145,9 +144,11 @@ int main() {
     case 2://view record
       cout<<"Who's record would you like to view?\n";
       displaydata(arr);
-      int view;
-      InputValidation(view);
-      displayplayerdata(arr, view-1);
+      if(!arr[0].name.empty()) {
+        int view;
+        InputValidation(view);
+        displayplayerdata(arr, view-1);
+      }
       break;
     case 3://Get average best score
       float ave;
