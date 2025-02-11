@@ -76,10 +76,9 @@ void displaydata(player arr[]) {
   int number_p = 0;
   if(arr[0].name.empty()) {
     cout <<"No players found in the data." << endl;
-  } else {
-    cout<<"Who's record would you like to view?\n";
   }
   for(int z = 0; z < 5; z++) {
+    cout<<"Who's record would you like to view?(choices 1-"<<z+1<<")\n";
     if (!arr[z].name.empty()) {
         cout<<z+1<<". "<<"      "<< arr[z].name << endl;
         number_p += 1;
@@ -124,25 +123,26 @@ int main() {
   InputValidation(x);
   switch (x) {
     case 1://Add Record
-      for(int i = 0, j = 0; i < 5; i++) {
+      for(int i = 0; i < 5; i++) {
         if (arr[i].name.empty()) {
           addrecord(arr, i);
           break;
-        } else {
-          cout <<"Reached Maximum number of players entered\n";
-          cout <<"\nWould you like to replace other player's data? (Type 1 if yes and any other key otherwise)";
-          InputValidation(j);
-          if (j == 1) {
-            displaydata(arr);
-            cout<<"Select a number to choose to alter data.\n";
-            int alter;
-            InputValidation(alter);
-            addrecord(arr, alter-1);
-            break;
-          }
-        }
+        } 
       }
-    break;
+      int j = 0;
+      cout <<"Reached Maximum number of players entered\n";
+      cout <<"\nWould you like to replace other player's data? (Type 1 if yes and any other key otherwise)";
+      InputValidation(j);
+      if (j == 1) {
+        displaydata(arr);
+        cout<<"Select a number to choose to alter data.\n";
+        int alter;
+        InputValidation(alter);
+        addrecord(arr, alter-1);
+        break;
+      }
+      break;
+
     case 2://view record
       displaydata(arr);
       if(!arr[0].name.empty()) {
