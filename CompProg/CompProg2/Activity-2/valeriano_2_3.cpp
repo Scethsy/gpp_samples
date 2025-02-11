@@ -33,15 +33,15 @@ int main() {
 
   // Count the number of vowels and whitespaces
   for (int i = 0; i < str.length(); i++) {
-    if (str[i] == 'A') {
+    if (str[i] == 'A' || str[i] == 'a') {
       vowels[0]++;
-    } else if (str[i] == 'E') {
+    } else if (str[i] == 'E' || str[i] == 'e') {
       vowels[1]++;
-    } else if (str[i] == 'I') {
+    } else if (str[i] == 'I' || str[i] == 'i') {
       vowels[2]++;
-    } else if (str[i] == 'O') {
+    } else if (str[i] == 'O' || str[i] ==  'o') {
       vowels[3]++;
-    } else if (str[i] == 'U') {
+    } else if (str[i] == 'U' || str[i] ==  'u') {
       vowels[4]++;
     } else if (str[i] == ' ') {
       whitespaces++;
