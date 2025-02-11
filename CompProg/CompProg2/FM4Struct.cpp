@@ -73,9 +73,14 @@ void addrecord(player arr[], int i) {
 }
 
 void displaydata(player arr[]) {
+  int number_p = 0;
+  if(arr[0].name.empty()) {
+    cout <<"No players found in the data." << endl;
+  }
   for(int z = 0; z < 5; z++) {
     if (!arr[z].name.empty()) {
         cout<<z+1<<". "<<"      "<< arr[z].name << endl;
+        number_p += 1;
     }
   }
 }
