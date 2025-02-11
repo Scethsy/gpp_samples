@@ -51,6 +51,7 @@ struct player{
   string name;
   int age;
   int bestscore[2];
+  float average;
 };
 
 void choices_menu() {
@@ -70,6 +71,7 @@ void addrecord(player arr[], int i) {
   cout<<"\nEnter 2 Best Played Scores: ";
   InputValidation2(arr[i].bestscore[0]);
   InputValidation2(arr[i].bestscore[1]);
+  arr[i].average = (arr[i].bestscore[0] + arr[i].bestscore[1]) / 2;
 }
 
 void displaydata(player arr[], int total) {
@@ -92,13 +94,11 @@ void displayplayerdata(player arr[], int i) {
   cout<<"Best Scores: "<< arr[i].bestscore[0] << " & " << arr[i].bestscore[1] << endl;
 }
 
-void displayplayer (player arr[], int i, const string& highlow) {
+void displayplayer (player arr[], float limit, const string& highlow) {
   cout<<"The "<< highlow <<" best score player(s) is/are: \n\n";
-  for(int j = 0; j < 5; j++) {
-    for(int b = 0; b < 2; b++) {
-      if(i == arr[i].bestscore[b]) {
-        cout<<arr[i].name <<": "<<arr[i].bestscore[b];
-      }
+  for(int i = 0; i < 5; i++) {
+    if (arr[i].average == limit) {
+      cout<<arr[i].name <<": "<<arr[i].average;
     }
   }
 }
@@ -162,31 +162,19 @@ int main() {
       cout<<"\nThe average best scores of all players are: "<< ave;
       break;
     case 4://get players who got highest scores
-      for(int i = 0; i < 5; i++) {
-        int highest = 0;
-        //get highest bestscore
-        if(!(arr[i].name.empty())) {
-          for(int j = 0; j < 2; j++) {
-            if (highest < arr[i].bestscore[j]) {
-              highest = arr[i].bestscore[j];
-            }
-          }
-        }
-        displayplayer(arr, highest, "highest");
+      int highest = 0;
+      for(int i = 0; arr[i].average > highest; i++) {
+        highest = arr[i].average;
+        displayplayer(arr, highest, "Maximum");
       }
+
+
       break;
     case 5://get players who got lowest scores
-      for(int i = 0; i < 5; i++) {
-        int lowest = 0;
-        //get highest bestscore
-        if(!(arr[i].name.empty())) {
-          for(int j = 0; j < 2; j++) {
-            if (lowest > arr[i].bestscore[j]) {
-              lowest = arr[i].bestscore[j];
-            }
-          }
-        }
-        displayplayer(arr, lowest, "lowest");
+      int lowest = 0;
+      for(int i = 0; arr[i].average < lowest; i++) {
+        lowest = arr[i].average;
+        displayplayer(arr, lowest, "Minimum");
       }
       break;
     case 6://exit;
