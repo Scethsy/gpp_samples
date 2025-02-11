@@ -1,14 +1,3 @@
-// Create a program that will concatenate two strings.
-//
-// Output:
-// ***************
-// STRING CONCATENATION
-// ***************
-// Enter a first word (str1): Welcome
-// Enter a second word (str2): to FEU Tech
-// new string value for str1: Welcome to FEU Tech
-// ACTIVITY 3.3
-
 #include <iostream>
 #include <cstring>
 
@@ -21,8 +10,6 @@ int main() {
     cout << "STRING CONCATENATION" << endl;
     cout << "***************" << endl;
 
-    // getline function will get all the characters including spaces and second word
-    // if no getline "to FEU tech" will only get the first word "to"
     cout << "Enter a first word (str1): ";
     cin.getline(str1, 100);
 

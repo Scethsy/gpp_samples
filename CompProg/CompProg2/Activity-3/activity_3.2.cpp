@@ -1,15 +1,3 @@
-// Create a program that will copy a string from one variable to another using the strcpy( )
-
-// Output:
-// ********************
-// STRING COPY
-// ********************
-// Enter a first word (str1): abc
-// Enter a second word (str2): def
-// new string value for str1: def
-
-// ACTIVITY 3.2
-
 #include <iostream>
 #include <cstring>
 

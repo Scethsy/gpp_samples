@@ -1,9 +1,3 @@
-// Write a program that identifies the position of all even numbers in an array of 10 elements.
-
-// Output:
-// Sample Output: 
-// Enter 10 numbers: 4 6 7 9 11 13 15 16 20 23 
-// Even numbers are located at indices: 0 1 7 8
 #include <iostream>
 using namespace std;
 

@@ -1,15 +1,3 @@
-/**
- * Write a program that will ask the user to enter the size of the array n < 100.  Once the array size is 
-validated, it is required that the user will enter the elements of the array.  Finally, display the sorted array 
-elements using any sorting algorithm from smallest to greatest. 
-
-Sample Output: 
-Enter the size of the array:  4 
-Array element 1: 6 
-Array element 2: 4 
-Array element 3: 5 
-Array element 4: 2 
-The sorted array is:  2 4 5 6*/
 #include <iostream>
 using namespace std;
 

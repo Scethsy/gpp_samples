@@ -1,15 +1,3 @@
-// Create a program that will compare two input strings using strcmp( ).
-// 
-// Output:
-// ***************
-// STRING COMPARE
-// ***************
-// Enter a first word (str1): Hello
-// Enter a second word (str2): hello
-// negative
-
-// ACTIVITY 3.1
-
 #include <iostream>
 #include <cstring>
 using namespace std;

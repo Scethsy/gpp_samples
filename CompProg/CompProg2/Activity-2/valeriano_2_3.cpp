@@ -1,20 +1,3 @@
-/**
- * Write a program that counts the number of vowels and whitespaces in a string. The user’s input should be 
-all capital letters only. 
-
-Sample Output:
-Sample Output: 
-Enter a string: WELCOME TO ARRAYS 
-Vowels: 
-A 2 
-E 2 
-I 
-0 
-O 2 
-U 0 
-Whitespaces – 2
- */
-
 #include <iostream>
 #include <string>
 
