@@ -162,7 +162,7 @@ int main() {
       cout<<"\nThe average best scores of all players are: "<< ave;
       break;
     case 4://get players who got highest scores
-      int highest;
+      int highest = arr[0].average;
       for(int i = 0; arr[i].average > highest; i++) {
         highest = arr[i].average;
         displayplayer(arr, highest, "Maximum");
@@ -171,7 +171,7 @@ int main() {
 
       break;
     case 5://get players who got lowest scores
-      int lowest;
+      int lowest = arr[0].average;
       for(int i = 0; arr[i].average < lowest; i++) {
         lowest = arr[i].average;
         displayplayer(arr, lowest, "Minimum");
