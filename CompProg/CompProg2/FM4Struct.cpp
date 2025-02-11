@@ -83,7 +83,7 @@ void displaydata(player arr[], int total) {
   }
   for(int z = 0; z < 5; z++) {
     if (!arr[z].name.empty()) {
-        cout<<z+1<<". "<<"      "<< arr[z].name << endl;
+        cout<<z+1<<". "<<"      "<< arr[z].name <<" "<< arr[z].average << endl;
         number_p += 1;
     }
   }
@@ -130,12 +130,19 @@ int main() {
   player arr[5] = {};
   int x;
   int max = 5;
-  int total = totalplayers(arr);
+  
+  
+  
   
   do {
+      
   menu();
   choices_menu();
   InputValidation(x);
+  int total = totalplayers(arr);
+  int highest = arr[0].average;
+  int lowest = arr[0].average;
+  
   switch (x) {
     case 1://Add Record
 
@@ -162,20 +169,30 @@ int main() {
       cout<<"\nThe average best scores of all players are: "<< ave;
       break;
     case 4://get players who got highest scores
-      int highest = arr[0].average;
-      for(int i = 0; arr[i].average > highest; i++) {
-        highest = arr[i].average;
-        displayplayer(arr, highest, "Maximum");
+
+      for(int i = 0; i < total; i++) {
+
+        if(arr[i].average > highest){
+          highest = arr[i].average;
+        }
+        
       }
+      
+      displayplayer(arr, highest, "Maximum");
 
 
       break;
     case 5://get players who got lowest scores
-      int lowest = arr[0].average;
-      for(int i = 0; arr[i].average < lowest; i++) {
-        lowest = arr[i].average;
-        displayplayer(arr, lowest, "Minimum");
+
+      for(int i = 0; i < total; i++) {
+
+        if(arr[i].average < lowest){
+          lowest = arr[i].average;
+        }
+        
       }
+      
+      displayplayer(arr, lowest, "Minimum");
       break;
     case 6://exit;
       break;
