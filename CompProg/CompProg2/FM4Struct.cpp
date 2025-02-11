@@ -7,7 +7,7 @@ void InputValidation(int &x) {
     if (!(cin >> x)) {
     cout << "Error! Invalid input. Please enter a valid integer number.\n";
     cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.ignore(1214, '\n');
   } else if (x < 0 || x > 6) {
     cout << "Error! Invalid input. Please enter a number from the choices (0-6).\n";
   } else {
@@ -74,7 +74,9 @@ void addrecord(player arr[], int i) {
 
 void displaydata(player arr[]) {
   for(int z = 0; z < 5; z++) {
-    cout<<z+1<<". "<<"      "<< arr[z].name << endl;
+    if (!arr[z].name.empty()) {
+        cout<<z+1<<". "<<"      "<< arr[z].name << endl;
+    }
   }
 }
 void displayplayerdata(player arr[], int i) {
@@ -137,7 +139,7 @@ int main() {
     case 2://view record
       cout<<"Who's record would you like to view?\n";
       displaydata(arr);
-      int view = 0;
+      int view;
       InputValidation(view);
       displayplayerdata(arr, view-1);
       break;
