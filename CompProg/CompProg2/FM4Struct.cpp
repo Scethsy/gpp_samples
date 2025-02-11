@@ -67,7 +67,7 @@ void addrecord(player arr[], int i) {
   cout<<"\nEnter age: ";
   InputValidation2(arr[i].age);
 
-  cout<<"\n Enter 2 Best Played Scores: ";
+  cout<<"\nEnter 2 Best Played Scores: ";
   InputValidation2(arr[i].bestscore[0]);
   InputValidation2(arr[i].bestscore[1]);
 }
