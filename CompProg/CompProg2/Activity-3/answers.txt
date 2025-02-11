@@ -1,0 +1,8 @@
+Question 1: What is a string?
+Answer: A string is a sequence of characters to represent a text.
+
+Question 2: What is a cctype?
+Answer: A standard library header for character classification and convertion used for uppercase
+
+Question 3: What is a cstring?
+Answer: A standard library for manipulating C-style strings, used for copying and concatenation
