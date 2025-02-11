@@ -9,11 +9,7 @@ Array element 1: 6
 Array element 2: 4 
 Array element 3: 5 
 Array element 4: 2 
-The sorted array is:  2 4 5 6
-
-
- */
-
+The sorted array is:  2 4 5 6*/
 #include <iostream>
 using namespace std;
 
