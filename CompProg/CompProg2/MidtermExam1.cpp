@@ -117,39 +117,39 @@ int main() {
   int i = 0;
   char ln[50];
   do {
-  menu();
-  choices_menu();
-  InputValidation(choice);
+    menu();
+    choices_menu();
+    InputValidation(choice);
 
-  switch (choice) {
-    case 1://Prompt the user to input details for a new student and store them in the array.
-      addStudent(s, i);
-      break;
+    switch (choice) {
+      case 1://Prompt the user to input details for a new student and store them in the array.
+        addStudent(s, i);
+        break;
 
-    case 2://Display the details of all students in a tabular format.
-      displayStudents(s, i);
-      break;
+      case 2://Display the details of all students in a tabular format.
+        displayStudents(s, i);
+        break;
 
-    case 3://Calculate and return the average GPA of all students.
-      cout<<"\nThe Overall Average GPA of all students is: " << calculateAverageGPA(s, i) <<endl;
-      break;
+      case 3://Calculate and return the average GPA of all students.
+        cout<<"\nThe Overall Average GPA of all students is: " << calculateAverageGPA(s, i) <<endl;
+        break;
 
-    case 4://Display the details of students whose last name matches the input.
-      cout<<"\nEnter student's Last Name"<<endl;
-      cin.getline(ln, 50);
-      findStudentsByLastName(s, i, ln);
-      break;
+      case 4://Display the details of students whose last name matches the input.
+        cout<<"\nEnter student's Last Name"<<endl;
+        cin.ignore();
+        cin.getline(ln, 50);
+        findStudentsByLastName(s, i, ln);
+        break;
 
-    case 5://Exit
-      cout<<"\nBye bye, Run the Program to try again."<<endl;
-      break;
+      case 5://Exit
+        cout<<"\nBye bye, Run the Program to try again."<<endl;
+        break;
 
-    default:
+      default:
 
-      cout<<"Something went wrong"<<endl;
-      break;
-  }
-
+        cout<<"Something went wrong"<<endl;
+        break;
+    }
   } while (choice != 5);
   return 0;
 }
