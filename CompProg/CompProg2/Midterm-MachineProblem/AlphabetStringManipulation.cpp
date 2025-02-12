@@ -7,7 +7,7 @@ int main() {
 
   string word;
   cout << "Enter a word: ";
-  cin >> word;
+  getline(cin, word);
 
   cout << "Original string: " << word << endl;
 
