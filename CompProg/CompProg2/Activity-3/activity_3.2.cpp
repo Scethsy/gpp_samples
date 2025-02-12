@@ -11,10 +11,10 @@ int main() {
     cout << "********************" << endl;
 
     cout << "Enter a first word (str1): ";
-    cin >> str1;
+    cin.getline(str1, 100);
 
     cout << "Enter a second word (str2): ";
-    cin >> str2;
+    cin.getline(str2, 100);
 
     strcpy(str1, str2);
 
