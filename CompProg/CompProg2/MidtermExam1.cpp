@@ -41,20 +41,6 @@ void InputValidation(int &x) {
   }
 }
 //Case 1 Function
-/*void addStudent(student students[], int &numStudents) {
-  cout<<"\nEnter Student ID: ";
-  isnum(students[numStudents].studentID);
-  cout<<"\nEnter First Name: ";
-  cin>>students[numStudents].firstName;
-  //cin.getline(students[numStudents].firstName, 50);
-  cout<<"\nEnter Last Name: ";
-  //cin.getline(students[numStudents].lastName, 50);
-  cin>>students[numStudents].lastName;
-  cout<<"\nEnter GPA: ";
-  cin>>students[numStudents].GPA;
-  numStudents++;
-
-}*/
 void addStudent(student students[], int &numStudents) {
   cout<<"\nEnter Student ID: ";
   isnum(students[numStudents].studentID);
