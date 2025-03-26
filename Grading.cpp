@@ -36,7 +36,9 @@ int main() {
     }
     else {
         cout << "F, Failing Grade, Please Consult with Class Advisor" << endl;
+        cout <<"LOLOLOLOL" << endl;
     }
 
     return 0;
 }
+
